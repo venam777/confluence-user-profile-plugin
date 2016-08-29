@@ -1,0 +1,24 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/bftPluginIcon.png</param>
+        <param name="plugin-logo">images/bftPluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="confluence-user-profile-plugin"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="confluence-user-profile-plugin-resources" name="confluence-user-profile-plugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="confluence-user-profile-plugin.css" location="/css/confluence-user-profile-plugin.css"/>
+        <resource type="download" name="confluence-user-profile-plugin.js" location="/js/confluence-user-profile-plugin.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>confluence-user-profile-plugin</context>
+    </web-resource>
+    
+</atlassian-plugin>
